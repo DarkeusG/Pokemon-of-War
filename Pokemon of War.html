@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+    <style>
+
+         body {
+
+            margin: 0;
+
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+
+            /* Fondo de la página */
+
+            background-color: #fc0808;: ;
+
+        }
+
+
+
+        header {
+
+            background-color: red;
+
+            padding: 20px;
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+            position: relative;
+
+        }
+
+
+
+        .highlight {
+
+            text-decoration: none;
+
+            color: white;
+
+            margin: 0;
+
+        }
+
+
+
+        .content {
+
+            padding: 20px;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        .footer {
+
+            padding: 10px;
+
+            background-color: #ff0000;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+
+        .table-container {
+
+            display: table;
+
+            width: 100%;
+
+        }
+
+
+
+        .table-row {
+
+            display: table-row;
+
+        }
+
+
+
+        .table-cell {
+
+            display: table-cell;
+
+            vertical-align: top;
+
+        }
+
+
+
+        .joestar-img {
+
+            width: 80px;
+
+            height: auto;
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 20px;
+
+            transform: translateY(-50%);
+
+        }
+
+
+
+        .SNV-img {
+
+            width: 100%;
+
+            height: auto;
+
+        }
+
+
+
+        .kratos-img {
+
+            width: 15%;
+
+        }
+
+
+
+        .pokeball-img {
+
+            max-width: 350px; /* Ancho máximo permitido */
+
+            height: auto; /* Para mantener la proporción */
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+
+
+
+
+
+
+        .mechanics-img {
+
+            
+
+    width: 80%; /* Cambia el ancho según sea necesario */
+
+    max-width: 1000px; /* Ancho máximo permitido */
+
+    height: auto; /* Para mantener la proporción */
+
+    margin: 0 auto; /* Centra horizontalmente */
+
+    display: block; /* Para centrar en dispositivos de pantalla pequeña */
+
+
+
+        }
+
+        .pokemon-images{
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: space-between; /* Distribuye el espacio entre las imágenes */
+
+            margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+
+        }
+
+        .pokemon-images img {
+
+            width: 100%; /* Ancho del 100% del contenedor */
+
+            height: auto; /* Para mantener la proporción */
+
+           
+
+        }
+
+        .pokemon-images div {
+
+            width: 23%; /* Ancho de cada contenedor de imagen */
+
+            margin-bottom: 20px; /* Espacio entre filas */
+
+            text-align: center; /* Centra el texto debajo de las imágenes */
+
+        }
+
+        .pokemon-images p {
+
+            margin-top: 10px; /* Ajusta el margen superior del texto según sea necesario */
+
+        }
+
+        .kratos-text {
+
+            position: absolute;
+
+            top: -50px; /* Ajusta esta posición según sea necesario */
+
+            left: 9.33%; /* Posición horizontal centrada */
+
+            transform: translateX(-50%);
+
+        }
+
+
+
+        .historia-text{
+
+            margin-bottom: 80px; /* Ajusta esta distancia según sea necesario */
+
+            position: relative;
+
+            top: -10px; /* Sube el elemento hacia arriba */
+
+            text-align: center;
+
+        }
+
+
+
+        .personajes-text{
+
+            text-align: center;
+
+            margin-bottom: 40px
+
+
+
+
+
+        }
+
+        .personajes-paragraph{
+
+            text-align: center;
+
+            margin-bottom: 150px;
+
+        }
+
+        .pokemon-text{
+
+            position: absolute;
+
+            top: -50px; /* Ajusta esta posición según sea necesario */
+
+            left: 9.33%; /* Posición horizontal centrada */
+
+            transform: translateX(-50%);
+
+        }
+
+        .mechanics-text {
+
+            text-align: center;
+
+            margin-bottom: 100px
+
+        }
+
+        .historia-paragraph {
+
+            margin-bottom: 100px; /* Ajusta esta distancia según sea necesario */
+
+            position: relative;
+
+            left: 50px;
+
+            top: -20px; /* Sube el elemento hacia arriba */
+
+            text-align: center;
+
+        }
+
+        .kratos-paragraph {
+
+            text-align: right;
+
+            margin-right: 100px; /* Ajusta este valor según sea necesario */
+
+            margin-top: -5px;
+
+            font-weight:20 ;
+
+        }
+
+
+
+        .pokemon-paragraph{
+
+            text-align: right;
+
+            margin-left: 20px;
+
+        }
+
+        .mechanics-paragraph {
+
+            text-align: justify;
+
+        }
+
+
+
+        .footer {
+
+            background-color: #ff0000;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 10px;
+
+        }
+
+        .kratos-section {
+
+            display: flex;
+
+            align-items: center; /* Centra verticalmente los elementos */
+
+            position: relative;
+
+            margin-bottom: 100px;
+
+        }
+
+
+
+        .kratos-img {
+
+            width: 20%; /* Ancho de la imagen de Kratos */
+
+        }
+
+
+
+        .kratos-paragraph {
+
+            margin-left: 20px; /* Espacio entre la imagen y el párrafo */
+
+        }
+
+        .pokemon-section {
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            margin-top:100px;
+
+            margin-bottom: 100px;
+
+        }
+
+        #background-form {
+
+            margin-top: 20px;
+
+            text-align: center;
+
+        }
+
+
+
+        #background-url {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        #background-form button {
+
+            padding: 5px 10px;
+
+            background-color: #4CAF50;
+
+            color: rgb(238, 9, 9);
+
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+
+
+        #background-form button:hover {
+
+            background-color: #45a049;
+
+        }
+
+    </style>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        // Manejador de eventos para enviar el formulario
+
+        document.getElementById("background-form").addEventListener("submit", function(event) {
+
+            event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+
+
+
+            // Obtener el valor de la URL de la imagen del campo de entrada
+
+            var imageUrl = document.getElementById("background-url").value;
+
+
+
+            // Establecer la imagen de fondo del cuerpo de la página
+
+            document.body.style.backgroundImage = "url('" + imageUrl + "')";
+
+
+
+            // Limpiar el campo de entrada después de establecer la imagen de fondo
+
+            document.getElementById("background-url").value = "";
+
+        });
+
+    });
+
+</script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            var imagenesPokemon = document.querySelectorAll(".pokemon-images img");
+
+            imagenesPokemon.forEach(function(imagen) {
+
+                imagen.addEventListener("mouseover", function() {
+
+                    var nombreImagen = imagen.getAttribute("alt");
+
+                    var nuevaImagenSrc = nombreImagen + "2.png";
+
+                    imagen.src = nuevaImagenSrc;
+
+                });
+
+                imagen.addEventListener("mouseleave", function() {
+
+                    var nombreImagen = imagen.getAttribute("alt");
+
+                    var originalImagenSrc = nombreImagen + ".png";
+
+                    imagen.src = originalImagenSrc;
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+
+
+<body>
+
+
+
+    <header>
+
+        <img src="Joestar.png" alt="Joestar" class="joestar-img">
+
+        <h1 class="highlight">Pokemon of War</h1>
+
+    </header>
+
+
+
+    <img src="SNV.jpg" alt="SNV" class="SNV-img">
+
+
+
+    <div class="content">
+
+        <div class="table-container">
+
+            <div class="table-row">
+
+                <div class="table-cell">
+
+                    <h2 class="historia-text">Historia</h2>
+
+                    <p class="historia-paragraph">Pokémon of War, Kratos tras haber acabado con las hermanas del destino trató de viajar al pasado para cumplir su venganza, <br></br>
+
+                        pero un fallo en los hilos temporales le hizo viajar a otra época, otro lugar, el mundo de las criaturas Pokémon,<br></br>
+
+                     para volver a su tiempo deberá acabar con todo lo que pueda y encontrar un hilo temporal, incluso si debe matar dioses de otras dimensiones</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="table-container">
+
+            <div class="table-row">
+
+                <div class="table-cell">
+
+                    <h2 class="personajes-text">Personajes</h2>
+
+                    <p class="personajes-paragraph">Aquí puedes encontrar información sobre los personajes relevantes de la historia.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="table-container">
+
+            <div class="table-row">
+
+                <div class="table-cell">
+
+                    <div class="kratos-section">
+
+                        <h3 class="kratos-text">Kratos</h3>
+
+                        <img src="Kratos.png" alt="Kratos" class="kratos-img">
+
+                        <p class="kratos-paragraph">
+
+                            Kratos, un guerrero espartano que durante 10 años sirvió a Atenea y Zeus, los cuales le prometieron que perdonarían todos sus pecados si lograba hacer su última tarea: Matar a Ares, dios de la guerra.<br><br>
+
+                            Tras una insaciable búsqueda para conseguir la caja de Pandora (La única forma de que un mortal mate a un dios) Ares lo mató después de conseguirla, pero Kratos logró salir del inframundo y recuperar la Caja, acabando con Ares.<br><br>
+
+                            Sin un dios de la Guerra, los dioses le propusieron el cargo, y como no dejaron a Kratos morir porque sus pesadillas y visiones seguían presentes, dejando a un guerrero y dios enfadado con los dioses.<br><br>
+
+                            Tras varios actos egoístas como una divinidad, Kratos fue traicionado por su propio padre, Zeus, el cual lo mató a sangre fría, pero como la otra vez, volvió a la vida, gracias a Gaia, una titánide.<br><br>
+
+                            Su misión ahora era conseguir una audiencia con las hermanas del destino y cambiar su destino a manos del padre de los dioses, llegando después de enfrentar innumerables peligros.<br><br>
+
+                            Las hermanas negaron que Kratos cambiara su destino, así que este furioso, acabó con las 3 hermanas y viajó en el tiempo.<br><br>
+
+                            Los hilos fallaron por no ser controlados por las hermanas y llevaron a Kratos a un mundo desconocido para él, parecía pacífico y no sabía cómo regresar, pero su odio a Zeus era demasiado grande, así que en búsqueda de matar a su padre, Kratos acabará con las criaturas míticas de ese nuevo mundo, el de los Pokémon.
+
+                        </p>
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="table-container">
+
+            <div class="table-row">
+
+                <div class="table-cell">
+
+                    <div class="pokemon-section">
+
+                        <h3 class="pokemon-text">Pokémon</h3>
+
+                        <img src="pokeball.png" alt="Pokeball" class="pokeball-img" style="width: 60%;">
+
+                        <p class="pokemon-paragraph">Los Pokémon son criaturas de todo tipo de formas y tamaños que viven bien en un medio salvaje o junto a los seres humanos. <br></br>
+
+                                                     La mayoría de los Pokémon solo hablan para decir sus nombres. En la actualidad, hay más de 700 criaturas que habitan el universo Pokémon.<br></br>
+
+                                                     En un vórtice de completo caos y nada, surge un solo huevo, que luego eclosiona en Arceus, el primer ser que existe. Arceus crea entonces el tiempo: Dialga, el espacio: Palkia, y la antimateria: Giratina. <br></br>
+
+                                                     Sin embargo, Giratina, como castigo por su naturaleza destructiva, es enviada por Arceus a vivir en el Mundo de la Distorsión. <br></br>
+
+                                                     Dialga y Palkia logran crear el universo y el mundo Pokémon y luego se retiran a sus propias dimensiones.<br></br>
+
+                                                     Arceus crea entonces el conocimiento: Uxie, la emoción: Mesprit, y la fuerza de voluntad: Azelf; Luego compartirían estos tres rasgos con todas las criaturas vivientes que nacerían en el universo. <br></br>
+
+                                                     Finalmente, los tres se sumergen en cuevas en el fondo de tres lagos en Sinnoh: el lago Verity, el lago Valor y el lago Acuity, lo que les da el nombre de "guardianes del lago".<br></br>
+
+                                                     Kyogre primigenio y Groudon primigenio se forman por la energía primigenia en la región de Hoenn y luego proceden a llenar el mar y crear tierra, respectivamente. <br></br>
+
+                                                     Un encuentro fortuito convierte a los dos en rivales, y comienza un conflicto por el dominio del mundo Pokémon. <br></br>
+
+                                                     Esta batalla continúa hasta que Rayquaza la sofoca, lo que hace que Kyogre y Groudon se retiren a cavernas especiales, donde descansan durante años. <br></br>
+
+                                                     
+
+                                                    </p>
+
+                    </div>
+
+                        
+
+                        <div class="pokemon-images">
+
+                            <div>
+
+                                <img src="Decidueye.png" alt="Decidueye">
+
+                                <p>Decidueye</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Feraligatr.png" alt="Feraligatr">
+
+                                <p>Feraligatr</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Gardevoir.png" alt="Gardevoir">
+
+                                <p>Gardevoir</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Gengar.png" alt="Gengar">
+
+                                <p>Gengar</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Greninja.png" alt="Greninja">
+
+                                <p>Greninja</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Infernape.png" alt="Infernape">
+
+                                <p>Infernape</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Jynx.png" alt="Jynx">
+
+                                <p>Jynx</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Machamp.png" alt="Machamp">
+
+                                <p>Machamp</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Snorlax.png" alt="Snorlax">
+
+                                <p>Snorlax</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Vaporeon.png" alt="Vaporeon">
+
+                                <p>Vaporeon</p>
+
+                            </div>
+
+                            <div>
+
+                                <img src="Arceus.png" alt="Arceus">
+
+                                <p>Arceus</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="table-container">
+
+            <div class="table-row">
+
+                <div class="table-cell">
+
+                    <h2 class="mechanics-text">Mecánicas:</h2>
+
+                    <img src="Mecánicas.jpeg" alt="Mecánicas" class="mechanics-img" style="width: 120%;">
+
+                    <h3 class="mechanics-text">Movimiento y Salto:</h3>
+
+                    <p class="mechanics-paragraph">Para el movimiento de Kratos, el personaje principal, utilizamos las clásicas teclas AWSD, utilizando las teclas A y D para movimiento de izquierda a derecha respectivamente por un movimiento sencillo de los dedos por la cómoda posición de la mano, al estar arriba y junto a las teclas A y D, W es el botón de salto para el protagonista.</p>
+
+                    <h3 class="mechanics-text">Ataque y Bloqueo:</h3>
+
+                    <p class="mechanics-paragraph">En el caso de ataque y bloqueo utilizamos las teclas P y O respectivamente, ya que permiten una posición cómoda de manos, atacando con P y bloqueando rápidamente con la O.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <div class="footer">
+
+        <h3>Redes Sociales de los Creadores:</h3>
+
+        <h4>Miguel Àngel de Diego Petkov</h4>
+
+        <a href="https://www.instagram.com/kratos2725" id="kratos2725">Instagram: kratos2725</a>
+
+        <h4>Iker Guerrero Caballero</h4>
+
+        <a href="https://www.instagram.com/guerrerroo_" id="guerrerroo_">Instagram: guerrerroo_</a>
+
+    </div>
+
+
+
+</body>
+
+
+
+</html>
+
